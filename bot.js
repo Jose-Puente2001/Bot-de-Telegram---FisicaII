@@ -29,12 +29,21 @@ bot.command('electricidad', (ctx)=>{
 ctx.reply('Sabías que inglaterra fue el primer pais en tener una ciudad iluminada?La ciudad inglesa de Godalming (Surrey) fue la primera en cambiar alumbrado público de gas por uno alimentado por energía eléctrica en el año 1.881 ');
 })
 
-bot.command('leydecoloum', (ctx)=>{
+bot.command('leydecoloumb', (ctx)=>{
 ctx.reply('La ley de Coloum se ve muy reflejada en la vida cotidiana, algunos ejemplos son: Cuando usamos imanes, si quisiéramos calcular la fuerza de atracción pudiéramos hacerlo,cuando sentimos corriente pasar por nuestro cuerpo,cuando se forman rayos; entre otros.');
 })
 
+
+bot.command('circuito', (ctx)=>{
+ctx.reply('Te haz preguntado porque la tecnologia se basa en 0 y 1. Y no en otro numero?. Simple por el paso de electricidad en los circuito, cuando pasa electricidad es un 1 y cuando no pasa electricidad es un 0');
+
+})
+
+
+
+
 bot.command('help', (ctx)=>{
-ctx.reply('Comandos para usar el bot: /electrostatica, /leydecoloum, /electromagnetismo,/electricidad, /help');
+ctx.reply('Comandos para usar el bot: /electrostatica, /leydecoloumb, /electromagnetismo,/electricidad, /circuito, /help');
 	
 })
 
