@@ -1,19 +1,13 @@
 const Telegraf = require('telegraf').Telegraf;
 const dotenv = require('dotenv').config();
-const bot = new Telegraf(process.env.BOT_TOKEN);
-const express = require('express');
-const app = express();
+const API_TOKEN = process.env.BOT_TOKEN;
+const URL = process.env.URL || 'https://your-heroku-app.herokuapp.com';
+const bot = new Telegraf(API_TOKEN);
 
-const port = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000
+bot.telegram.setWebhook(`${URL}/bot${API_TOKEN}`);
+bot.startWebhook(`/bot${API_TOKEN}`, null, PORT)
 
-
-app.get('/', (req, res)=>{
-	res.send('Hola mundo')
-})
-
-app.listen(port, ()=>{
-	console.log(`server en el puerto: ${port}`);
-})
 
 bot.command('electrostatica', (ctx)=>{
 ctx.reply('Sabías que la electrostática es muy usada en la biología? La teoría electrostática clásica ha sido estudiada y aplicada en sistemas microscópicos de manera tal que se han obtenido resultados que comprueban su validez. Actualmente se tiene un fácil acceso a estudios de sistemas biológicos-moleculares de manera tal que se han realizado modelos que describen el comportamiento y las interacciones entre las estructuras moleculares.');
@@ -25,4 +19,4 @@ ctx.reply('Este campo de la física ha sido clave en el desarrollo de numerosas 
 
 })
 
-bot.startPolling()
+bot.launch()
