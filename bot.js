@@ -25,4 +25,4 @@ ctx.reply('Este campo de la física ha sido clave en el desarrollo de numerosas 
 
 })
 
-bot.launch()
+bot.startPolling()
