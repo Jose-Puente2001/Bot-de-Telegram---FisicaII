@@ -34,12 +34,7 @@ ctx.reply('La ley de Coloum se ve muy reflejada en la vida cotidiana, algunos ej
 })
 
 bot.command('help', (ctx)=>{
-ctx.reply('Comandos para usar el bot: 
- 1)/electrostatica
- 2)/ley-de-coloum
- 3)/electromagnetismo,
- 4)/electricidad 
- 6)/help');
+ctx.reply('Comandos para usar el bot: /electrostatica, /ley-de-coloum, /electromagnetismo,/electricidad, /help');
 	
 })
 
