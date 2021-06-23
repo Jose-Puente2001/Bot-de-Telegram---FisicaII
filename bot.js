@@ -1,6 +1,17 @@
 const Telegraf = require('telegraf').Telegraf;
-const bot = new Telegraf('1844630102:AAFXyxsjHN9uaMBhFayg4RunzNWvKxv_ViA')
+const bot = new Telegraf('1844630102:AAFXyxsjHN9uaMBhFayg4RunzNWvKxv_ViA');
+const express = require('express');
+const app = express();
 
+app.set("port", process.env.PORT || 3000);
+
+app.get('/', (req, res)=>{
+	res.send('Hola mundo')
+})
+
+app.listen(app.get("port"), ()=>{
+	console.log("servidor escuchando");
+})
 
 bot.command('electrostatica', (ctx)=>{
 ctx.reply('Sabías que la electrostática es muy usada en la biología? La teoría electrostática clásica ha sido estudiada y aplicada en sistemas microscópicos de manera tal que se han obtenido resultados que comprueban su validez. Actualmente se tiene un fácil acceso a estudios de sistemas biológicos-moleculares de manera tal que se han realizado modelos que describen el comportamiento y las interacciones entre las estructuras moleculares.');
