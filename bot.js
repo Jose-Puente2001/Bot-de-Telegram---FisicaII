@@ -1,7 +1,9 @@
 const Telegraf = require('telegraf').Telegraf;
-const bot = new Telegraf('1844630102:AAFXyxsjHN9uaMBhFayg4RunzNWvKxv_ViA');
+const dotenv = require('dotenv').config();
+const bot = new Telegraf(process.env.BOT_TOKEN);
 const express = require('express');
 const app = express();
+
 
 app.set("port", process.env.PORT || 3000);
 
