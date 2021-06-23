@@ -30,7 +30,7 @@ ctx.reply('Sabías que inglaterra fue el primer pais en tener una ciudad ilumina
 })
 
 bot.command('leydecoloumb', (ctx)=>{
-ctx.reply('La ley de Coloum se ve muy reflejada en la vida cotidiana, algunos ejemplos son: Cuando usamos imanes, si quisiéramos calcular la fuerza de atracción pudiéramos hacerlo,cuando sentimos corriente pasar por nuestro cuerpo,cuando se forman rayos; entre otros.');
+ctx.reply('La ley de Coloumb se ve muy reflejada en la vida cotidiana, algunos ejemplos son: Cuando usamos imanes, si quisiéramos calcular la fuerza de atracción pudiéramos hacerlo,cuando sentimos corriente pasar por nuestro cuerpo,cuando se forman rayos; entre otros.');
 })
 
 
