@@ -12,7 +12,7 @@ app.get('/', (req, res)=>{
 })
 
 app.listen(app.get("port"), ()=>{
-	console.log("servidor escuchando");
+	console.log("servidor escuchando" + app.get("port"));
 })
 
 bot.command('electrostatica', (ctx)=>{
