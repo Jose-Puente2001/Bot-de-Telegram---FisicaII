@@ -29,12 +29,12 @@ bot.command('electricidad', (ctx)=>{
 ctx.reply('Sabías que inglaterra fue el primer pais en tener una ciudad iluminada?La ciudad inglesa de Godalming (Surrey) fue la primera en cambiar alumbrado público de gas por uno alimentado por energía eléctrica en el año 1.881 ');
 })
 
-bot.command('ley-de-coloum', (ctx)=>{
+bot.command('leydecoloum', (ctx)=>{
 ctx.reply('La ley de Coloum se ve muy reflejada en la vida cotidiana, algunos ejemplos son: Cuando usamos imanes, si quisiéramos calcular la fuerza de atracción pudiéramos hacerlo,cuando sentimos corriente pasar por nuestro cuerpo,cuando se forman rayos; entre otros.');
 })
 
 bot.command('help', (ctx)=>{
-ctx.reply('Comandos para usar el bot: /electrostatica, /ley-de-coloum, /electromagnetismo,/electricidad, /help');
+ctx.reply('Comandos para usar el bot: /electrostatica, /leydecoloum, /electromagnetismo,/electricidad, /help');
 	
 })
 
