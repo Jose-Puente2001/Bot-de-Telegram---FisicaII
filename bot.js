@@ -4,15 +4,15 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 const express = require('express');
 const app = express();
 
+const port = process.env.PORT || 3000
 
-app.set("port", process.env.PORT || 3000);
 
 app.get('/', (req, res)=>{
 	res.send('Hola mundo')
 })
 
-app.listen(app.get("port"), ()=>{
-	console.log("servidor escuchando" + app.get("port"));
+app.listen(port, ()=>{
+	console.log(`server en el puerto: ${port}`);
 })
 
 bot.command('electrostatica', (ctx)=>{
