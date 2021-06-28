@@ -4,15 +4,15 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 const express = require('express');
 const app = express();
 
+const port = process.env.PORT || 3000
 
-app.set("port", process.env.PORT || 3000);
 
 app.get('/', (req, res)=>{
 	res.send('Hola mundo')
 })
 
-app.listen(app.get("port"), ()=>{
-	console.log("servidor escuchando" + app.get("port"));
+app.listen(port, ()=>{
+	console.log(`server en el puerto: ${port}`);
 })
 
 bot.command('electrostatica', (ctx)=>{
@@ -24,5 +24,6 @@ bot.command('electromagnetismo', (ctx)=>{
 ctx.reply('Este campo de la física ha sido clave en el desarrollo de numerosas disciplinas y tecnologías, en particular de las ingenierías y la electrónica, así como del almacenamiento de la electricidad e incluso su utilización en áreas de la salud, de la aeronáutica o de la construcción urbana. Algunos ejemplos son: Micrófonos, Tarjetas magnéticas, Almacenamiento digital en cintas magnéticas, entre otros.');
 
 })
+
 
 bot.launch()
